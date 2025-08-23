@@ -6,6 +6,7 @@ import ExperiencePage from './pages/ExperiencePage';
 import ProjectSection from './pages/ProjectSection';
 import CreativeWorks from './pages/CreativeWorks';
 import Contact from './pages/Contact';
+import Footer from './pages/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <ProjectSection />
         <CreativeWorks />
         <Contact />
+        < Footer />
         <SocialSidebar />
 
       </main>

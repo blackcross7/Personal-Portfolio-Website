@@ -51,7 +51,7 @@ const CreativeWorks = () => {
   return (
     <section
       id="creative-works"
-      className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 bg-gradient-to-b from-black via-gray-900 to-black text-white"
+      className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 bg-gradient-to-b from-black via-gray-900 to-black text-white pt-16 md:pt-0 pb-20 md:pb-28"
     >
       {/* Title */}
       <motion.h2
@@ -59,7 +59,7 @@ const CreativeWorks = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-3xl md:text-4xl font-bold text-center mb-8"
+        className="text-3xl md:text-4xl font-bold text-center mb-8 mt-6 sm:mt-8"
       >
         Creative Works
       </motion.h2>
