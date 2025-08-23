@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Custom Utilities for Animated Gradients ===== */
+@layer utilities {
+  @keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .animate-gradient {
+    animation: gradientBackground 16s ease infinite;
+    background: linear-gradient(270deg, #6EE7B7, #3B82F6, #9333EA);
+    background-size: 400% 400%;
+  }
+
+  @keyframes middleGradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .animate-about-gradient {
+    animation: middleGradientBG 20s ease infinite;
+    background: linear-gradient(270deg, #7b2ff7, #f107a3, #00c9ff);
+    background-size: 400% 400%;
+  }
+}
+
+/* ==== Example: Custom Root Font Family (Optional) ==== */
+:root {
+  font-family: 'Montserrat', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* ==== (OPTIONAL) Custom Styles ==== */
+
+/* If you want to add unique link or button styles, do it here: */
+/* 
+a {
+  transition: color 0.2s;
+}
+a:hover {
+  color: #535bf2;
+}
+*/
+
+/* You likely do NOT need the Vite/React supplied resets below:
+- body margin, display: flex, place-items, etc.
+- h1 font-size/line-height
+- duplicated color-scheme and color resets from Tailwind's normalize
+- button: custom focus/hover, border, padding, etc.
+
+All these are automatically handled or can be done via Tailwind utility classes!
+*/
+
+/* Add only custom classes you need for your unique color palette, fonts, etc. */
