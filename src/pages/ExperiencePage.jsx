@@ -60,7 +60,7 @@ const ExperiencePage = () => {
 
       <div className="relative max-w-5xl mx-auto flex flex-col">
         {/* Timeline line - Mobile left, Desktop center */}
-        <div className="absolute top-0 left-[1.15rem] md:left-1/2 transform -translate-x-1/2 md:translate-x-0 md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-purple-400 via-pink-400 to-red-500 opacity-50 z-0" />
+        <div className="absolute top-0 left-[1.15rem] md:left-1/2 transform -translate-x-1/2 md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-purple-400 via-pink-400 to-red-500 opacity-50 z-0" />
 
         <div className="flex flex-col gap-20 relative z-10">
           {experiences.map((exp, idx) => {

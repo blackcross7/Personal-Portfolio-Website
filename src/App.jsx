@@ -4,6 +4,8 @@ import AboutSection from './pages/AboutSection';
 import SocialSidebar from "./pages/SocialSidebar";
 import ExperiencePage from './pages/ExperiencePage';
 import ProjectSection from './pages/ProjectSection';
+import CreativeWorks from './pages/CreativeWorks';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -14,7 +16,10 @@ function App() {
         <AboutSection />
         <ExperiencePage />
         <ProjectSection />
+        <CreativeWorks />
+        <Contact />
         <SocialSidebar />
+
       </main>
     </>
   );
