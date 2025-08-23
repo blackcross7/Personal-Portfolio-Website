@@ -4,6 +4,7 @@ import Typewriter from "typewriter-effect";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Float, useGLTF } from "@react-three/drei";
 
+// 3D Globe
 const Model = () => {
   const gltf = useGLTF("/globe.glb");
   return (
@@ -39,10 +40,11 @@ const HeroSection = () => {
 
   return (
     <motion.section
+      id="home" // <-- Added ID for Navbar scroll
       initial={{ opacity: 0, scale: 0.98 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1.2, ease: "easeOut" }}
-      className="relative min-h-screen bg-black text-white flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen bg-black text-white flex items-center justify-center overflow-hidden scroll-smooth"
       role="main"
       aria-label="Hero section"
     >
@@ -50,10 +52,10 @@ const HeroSection = () => {
       <div className="absolute inset-0 animate-gradient z-0 pointer-events-none" />
       <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" />
 
-      {/* Left SVG Decoration (hidden on tablet and 1024px screens) */}
+      {/* Left SVG Decoration (hidden on smaller screens) */}
       <img
         src="/student.svg"
-        alt="Left Side Decoration"
+        alt="Student vector illustration"
         className="
           absolute left-0 top-0 h-full object-cover z-0 pointer-events-none opacity-30 
           max-w-[45%] -translate-x-1/2 
@@ -76,7 +78,8 @@ const HeroSection = () => {
         </p>
       </motion.div>
 
-      <div className="
+      <div
+        className="
           relative z-10 w-full
           flex flex-col-reverse lg:flex-row
           items-center justify-between
@@ -87,7 +90,8 @@ const HeroSection = () => {
         "
       >
         {/* Left Content */}
-        <div className="
+        <div
+          className="
             w-full
             lg:w-1/2
             flex flex-col items-center text-center justify-center
@@ -170,7 +174,8 @@ const HeroSection = () => {
             "
           >
             <a
-              href="mailto:your-email@example.com"
+              href="mailto:kartikay.kk47@gmail.com"
+              aria-label="Send me an email"
               className="
                 bg-green-500 hover:bg-green-600 text-white font-semibold
                 py-2 px-4 text-base sm:text-lg
@@ -185,6 +190,7 @@ const HeroSection = () => {
             <a
               href="/resume.pdf"
               download
+              aria-label="Download my resume"
               className="
                 bg-transparent border border-green-400
                 hover:bg-green-500 hover:text-white text-green-400 font-semibold
@@ -201,13 +207,18 @@ const HeroSection = () => {
         </div>
 
         {/* Right 3D Globe */}
-        <div className="
+        <div
+          className="
+            relative
             w-full lg:w-[450px]
             h-[170px] xs:h-[215px] sm:h-[260px] md:h-[320px] lg:h-[500px]
             flex justify-center items-center
             mb-3 lg:mb-0
           "
         >
+          {/* Glow behind globe */}
+          <div className="absolute w-72 h-72 lg:w-96 lg:h-96 rounded-full bg-green-400/20 blur-3xl animate-pulse" />
+
           <Canvas camera={{ position: [4, 4, 6], fov: 40 }}>
             <ambientLight intensity={0.7} />
             <directionalLight position={[5, 5, 5]} intensity={1} />

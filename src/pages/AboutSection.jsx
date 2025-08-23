@@ -152,10 +152,12 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="w-full flex flex-col items-center relative z-0">
+    <section
+      id="about" // <-- Added for Navbar scroll
+      className="w-full flex flex-col items-center relative z-0 scroll-smooth"
+    >
       <div className="w-full relative animate-about-gradient pt-20 pb-16 px-4 sm:px-10 lg:px-[8rem] text-white min-h-screen flex items-center justify-center text-center">
-        {/* Background Image */}
-        
+        {/* Background overlay */}
         <div className="absolute inset-0 bg-black/60 z-0" />
 
         <motion.div
@@ -190,19 +192,21 @@ const AboutSection = () => {
             <div className="flex justify-center items-center mb-8 relative w-full sm:hidden">
               <button
                 onClick={handleTabPrev}
+                aria-label="Previous tab"
                 className="text-2xl text-white hover:text-green-400 transition absolute left-0"
               >
                 <MdChevronLeft />
               </button>
 
               <button
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all bg-green-500 text-black shadow-md`}
+                className="px-4 py-2 rounded-full text-sm font-medium transition-all bg-green-500 text-black shadow-md"
               >
                 {Object.keys(tabsContent)[currentTabIndex]}
               </button>
 
               <button
                 onClick={handleTabNext}
+                aria-label="Next tab"
                 className="text-2xl text-white hover:text-green-400 transition absolute right-0"
               >
                 <MdChevronRight />
@@ -215,6 +219,7 @@ const AboutSection = () => {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
+                  aria-label={`Open ${tab} tab`}
                   className={`px-4 py-2 rounded-full text-sm md:text-base font-medium transition-all ${
                     activeTab === tab
                       ? "bg-green-500 text-black shadow-md"
@@ -236,9 +241,13 @@ const AboutSection = () => {
                 className="flex flex-col items-center w-full"
               >
                 {activeTab === "Skills" ? (
-                  <div className="w-full flex items-center justify-center gap-6 sm:gap-10">
+                  <div className="w-full flex items-center justify-center gap-6 sm:gap-10 relative">
+                    {/* Glow behind icons */}
+                    <div className="absolute w-72 h-72 rounded-full bg-green-400/20 blur-3xl -z-10 animate-pulse" />
+
                     <button
                       onClick={handlePrev}
+                      aria-label="Previous skill set"
                       className="text-3xl text-white hover:text-green-400 transition"
                     >
                       <MdChevronLeft />
@@ -248,7 +257,10 @@ const AboutSection = () => {
                       {[...skillIcons, ...skillIcons]
                         .slice(currentSlide, currentSlide + logosToShow)
                         .map((item, index) => (
-                          <div key={index} className="flex flex-col items-center justify-center">
+                          <div
+                            key={index}
+                            className="flex flex-col items-center justify-center"
+                          >
                             {item.icon}
                             <p className="text-sm mt-2 text-gray-300">{item.name}</p>
                           </div>
@@ -257,6 +269,7 @@ const AboutSection = () => {
 
                     <button
                       onClick={handleNext}
+                      aria-label="Next skill set"
                       className="text-3xl text-white hover:text-green-400 transition"
                     >
                       <MdChevronRight />

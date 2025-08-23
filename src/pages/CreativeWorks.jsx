@@ -43,14 +43,14 @@ const creativeWorks = [
 ];
 
 const CreativeWorks = () => {
-  const [activeCard, setActiveCard] = useState(null); // for mobile toggle
-  const [hoveredCard, setHoveredCard] = useState(null); // for desktop hover
+  const [activeCard, setActiveCard] = useState(null); // Mobile toggle
+  const [hoveredCard, setHoveredCard] = useState(null); // Desktop hover
 
   const isMobile = window.innerWidth < 768;
 
   return (
     <section
-      id="creative-works"
+      id="creative-works" // ✅ navbar can scroll here
       className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 bg-gradient-to-b from-black via-gray-900 to-black text-white pt-16 md:pt-0 pb-20 md:pb-28"
     >
       {/* Title */}

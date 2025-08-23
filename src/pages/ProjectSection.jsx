@@ -2,14 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi";
 
-// Project details as in the provided image
+// Project details
 const projects = [
   {
     title: "React Portfolio Website",
     description:
       "A Reactive Portfolio Website made using Next.js, CSS, HTML, Tailwind CSS, JavaScript and Framer Motion. Code Source available on Github.",
     link: "#", // Replace with your repo/deploy link
-    image: "/portfolio-bg.jpg", // Add relevant bg image in your public/assets folder
+    image: "/portfolio-bg.jpg",
   },
   {
     title: "Solar System Simulation-3D",
@@ -48,14 +48,16 @@ const projects = [
   },
 ];
 
-// Card color/gradient theme (matching AboutSection)
+// Theme
 const cardTheme =
   "bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/20 shadow-xl";
 
-// Background section gradient and overlay, matching AboutSection
 const ProjectSection = () => {
   return (
-    <section className="w-full min-h-screen flex flex-col items-center relative z-0">
+    <section
+      id="projects"
+      className="w-full min-h-screen flex flex-col items-center relative z-0"
+    >
       <div className="w-full relative py-36 px-4 sm:px-10 lg:px-[12rem] text-white min-h-screen flex flex-col items-center bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e]">
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/60 z-0" />
@@ -63,24 +65,27 @@ const ProjectSection = () => {
         {/* Title */}
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.7 }}
           className="relative z-10 text-green-400 text-3xl sm:text-5xl lg:text-6xl font-bold mb-16 text-center"
         >
           My Projects
         </motion.h2>
 
+        {/* Cards */}
         <div className="relative z-10 grid gap-10 md:grid-cols-2 xl:grid-cols-3 w-full max-w-7xl">
           {projects.map((proj, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: idx * 0.08 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: idx * 0.08 }}
               className={`rounded-xl p-6 flex flex-col justify-between group ${cardTheme}`}
               style={{ minHeight: 340 }}
             >
+              {/* Image */}
               <div className="relative w-full h-40 rounded-lg overflow-hidden mb-5">
                 <img
                   src={proj.image}
@@ -89,8 +94,14 @@ const ProjectSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-80"></div>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-1">{proj.title}</h3>
+
+              {/* Text */}
+              <h3 className="text-lg font-semibold text-white mb-1">
+                {proj.title}
+              </h3>
               <p className="text-sm text-gray-200 mb-3">{proj.description}</p>
+
+              {/* Link */}
               <div className="flex justify-center mt-2">
                 <a
                   href={proj.link}

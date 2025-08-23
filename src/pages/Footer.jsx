@@ -1,20 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   const navItems = [
-    { name: "Home", link: "/" },
-    { name: "Projects", link: "/projects" },
-    { name: "About", link: "/about" },
-    { name: "Contact", link: "/contact" },
+    { name: "Home", link: "#home" },
+    { name: "About", link: "#about" },
+    { name: "Experience", link: "#experience" },
+    { name: "Projects", link: "#projects" },
+    { name: "Creativity", link: "#creative-works" },
+    { name: "Contact", link: "#contact" },
   ];
 
   const socialLinks = [
-    { icon: <FaLinkedin size={20} />, url: "https://www.linkedin.com" },
-    { icon: <FaGithub size={20} />, url: "https://github.com" },
-    { icon: <FaInstagram size={20} />, url: "https://instagram.com" },
+    { icon: <FaLinkedin size={20} />, url: "https://www.linkedin.com/in/YOUR_USERNAME" },
+    { icon: <FaGithub size={20} />, url: "https://github.com/YOUR_USERNAME" },
+    { icon: <FaInstagram size={20} />, url: "https://instagram.com/YOUR_USERNAME" },
   ];
 
   return (
@@ -28,8 +29,8 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         
         {/* Left - Site Title */}
-        <Link
-          to="/"
+        <a
+          href="#home"
           className="text-lg font-extrabold select-none"
           style={{
             fontFamily: "'Montserrat', 'Segoe UI', 'Arial', sans-serif",
@@ -37,18 +38,18 @@ const Footer = () => {
           }}
         >
           Portfolio
-        </Link>
+        </a>
 
         {/* Middle - Nav Links */}
         <div className="flex flex-wrap justify-center gap-6 text-sm">
           {navItems.map((item) => (
-            <Link
+            <a
               key={item.link}
-              to={item.link}
+              href={item.link}
               className="hover:text-blue-300 transition duration-200"
             >
               {item.name}
-            </Link>
+            </a>
           ))}
         </div>
 
