@@ -42,7 +42,6 @@ const CertifyData = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // ✅ FIXED: Always 4 cards for ≥768px
   const getItemsPerSlide = () => {
     if (windowWidth >= 768) return 4;
     return 1;
@@ -90,24 +89,36 @@ const CertifyData = () => {
         key={index}
         className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-xl p-5 text-white shadow-xl relative group transform transition-transform hover:scale-[1.03] border border-white/20"
         style={{
-          width: windowWidth < 768 ? "240px" : "260px",
-          height: windowWidth < 768 ? "200px" : "340px",
+          width: windowWidth < 768 ? "280px" : "260px",
+          height: windowWidth < 768 ? "340px" : "340px",
           flexShrink: 0
         }}
       >
-        {windowWidth >= 768 && (
-          <div className="relative w-full h-32 rounded-lg overflow-hidden mb-4">
-            <img src={cert.image} alt={cert.name} className="w-full h-full object-cover" />
-          </div>
-        )}
+        {/* Always show image */}
+        <div className="relative w-full h-32 rounded-lg overflow-hidden mb-4">
+          <img src={cert.image} alt={cert.name} className="w-full h-full object-cover" />
+        </div>
+
         <h3 className="text-lg font-semibold text-center mb-1 leading-tight">{cert.name}</h3>
         <p className="text-sm text-gray-300 text-center mb-1 italic">{cert.institution}</p>
         <p className="text-xs text-gray-400 text-center">{cert.year}</p>
+
+        {/* Overlay for desktop hover */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 transition">
+          <a
+            href={cert.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-400 hover:text-green-300 transition"
+          >
             <FiExternalLink size={32} />
           </a>
         </div>
+
+        {/* ✅ Always show "Tap to open" in mobile */}
+        {windowWidth < 768 && (
+          <p className="text-xs text-center mt-3 text-green-400">📲 Tap to open</p>
+        )}
       </div>
     ));
   };
@@ -120,16 +131,14 @@ const CertifyData = () => {
         </button>
         <div className="flex-1 overflow-hidden">
           <div className="flex justify-center">
-            {/* ✅ FIXED flex-nowrap to prevent wrapping */}
-            <div className="flex flex-nowrap gap-6 px-2">
-              {renderCards()}
-            </div>
+            <div className="flex flex-nowrap gap-6 px-2">{renderCards()}</div>
           </div>
         </div>
         <button onClick={handleNext} className="hidden md:block text-4xl text-white hover:text-green-400 transition">
           <MdChevronRight />
         </button>
       </div>
+
       {/* Mobile navigation buttons */}
       <div className="flex justify-center gap-4 md:hidden mt-4">
         <button onClick={handlePrev} className="text-2xl text-white hover:text-green-400 transition">

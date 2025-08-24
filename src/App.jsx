@@ -12,16 +12,33 @@ function App() {
   return (
     <>
       <Navbar />
-      <main className="overflow-x-hidden">
+      <main
+        className="
+          overflow-x-hidden 
+          overflow-y-scroll   /* scrolling enabled */
+        "
+        style={{
+          scrollbarWidth: "none",          /* Firefox */
+          msOverflowStyle: "none"          /* IE/Edge */
+        }}
+      >
+        {/* Hide scrollbar for Chrome/Safari/Edge */}
+        <style>
+          {`
+            main::-webkit-scrollbar {
+              display: none;
+            }
+          `}
+        </style>
+
         <HeroSection />
         <AboutSection />
         <ExperiencePage />
         <ProjectSection />
         <CreativeWorks />
         <Contact />
-        < Footer />
+        <Footer />
         <SocialSidebar />
-
       </main>
     </>
   );

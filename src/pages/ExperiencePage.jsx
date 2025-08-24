@@ -5,10 +5,10 @@ import { FaBriefcase } from "react-icons/fa";
 const experiences = [
   {
     title: "Programmer Analyst Trainee",
-    company: "Cognizant",
+    company: "Cognizant Technology Solutions",
     date: "Aug 2025 - Present",
     description:
-      "Leading various teams on scalable web applications using React, Node.js, MongoDB and Django framework. Involved in backend API integrations and frontend UI development.",
+      "Working as a Programmer Analyst Trainee in Application Development and Maintenance. Handy with JAVA, Command like interfaces such as LINUX, frameworks such as Bootstrap and Springboot, and Maven.",
   },
   {
     title: "Chief of Staff - MERN and Django Developer",
@@ -16,12 +16,12 @@ const experiences = [
     date: "Jul 2025 - Aug 2025",
     type: "Part-time",
     description:
-      "Led multiple teams on scalable web apps using React, Node.js, MongoDB, and Django. Worked on backend APIs and frontend UI development.",
+      "Served as a guide and Chief of various Team-Leads working on projects on MERN stack and Django. Completed projects like EduTEN and TEN Tech Competition Engine",
   },
   {
     title: "MERN Developer",
     company: "The Entrepreneurship Network",
-    date: "Apr 2025 - Present",
+    date: "Apr 2025 - Aug 2025",
     type: "Internship",
     description:
       "Built and maintained MERN-based web applications, collaborated with cross-functional teams, and handled deployment processes.",
@@ -32,7 +32,7 @@ const experiences = [
     date: "Nov 2024 - Jan 2025",
     type: "Internship",
     description:
-      "Automated test cases, contributed to software development, testing, and maintenance ensuring software quality and reliability.",
+      "Learned about Software Development Lifecycle, automated test cases, contributed to software development, testing, and maintenance ensuring software quality and reliability.",
   },
 ];
 
