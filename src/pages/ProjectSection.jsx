@@ -9,7 +9,7 @@ import Space from "../assets/SolarBlast.png";
 import SpaceStronaut from "../assets/SpaceStronaut.png";
 import Yoga from "../assets/YogaPose.png";
 import txtsum from "../assets/txtsum.png";
-import TCH from "../assets/Ten CodeHub.png";
+import TCH from "../assets/TEN CodeHub.png";
 import EDT from "../assets/Eduten.png";
 import TCE from "../assets/TCE.png";
 import Personal from "../assets/PersonalPortfolio.png";
