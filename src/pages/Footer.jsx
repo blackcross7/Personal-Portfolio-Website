@@ -13,9 +13,18 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: <FaLinkedin size={20} />, url: "https://www.linkedin.com/in/YOUR_USERNAME" },
-    { icon: <FaGithub size={20} />, url: "https://github.com/YOUR_USERNAME" },
-    { icon: <FaInstagram size={20} />, url: "https://instagram.com/YOUR_USERNAME" },
+    {
+      icon: <FaLinkedin size={20} />,
+      url: "https://www.linkedin.com/in/kartikay7/",
+    },
+    {
+      icon: <FaGithub size={20} />,
+      url: "https://github.com/blackcross7",
+    },
+    {
+      icon: <FaInstagram size={20} />,
+      url: "https://www.instagram.com/im_kartikay7?igsh=dGV5amtwbjh3encw",
+    },
   ];
 
   return (

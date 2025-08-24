@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
+// ✅ Local assets
+import Writing from "../assets/Writing.jpg";
+import Music from "../assets/Music.jpg";
+import Novel from "../assets/NCover.jpg";
+import Sapne from "../assets/Sapne.jpg";
+import TeriBaatein from "../assets/Teri Baatein.jpg";
+
 const creativeWorks = [
   {
     id: 1,
@@ -10,19 +17,18 @@ const creativeWorks = [
     items: [
       {
         id: "m1",
-        title: "Music Track 1",
-        image:
-          "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+        title: "Teri Baatein",
+        image: TeriBaatein,
+        link: "https://open.spotify.com/track/4WHizDD61lj8WncX3hsN3Q?si=2d43b0d3085b44ca",
       },
       {
         id: "m2",
-        title: "Music Track 2",
-        image:
-          "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=800&q=80",
+        title: "Sapne",
+        image: Sapne,
+        link: "https://open.spotify.com/track/13nx4q5ZkNNnCWtmH5YK7g?si=5bebad0faa9643ce",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=800&q=80",
+    image: Music,
   },
   {
     id: 2,
@@ -32,13 +38,12 @@ const creativeWorks = [
     items: [
       {
         id: "w1",
-        title: "My Novel",
-        image:
-          "https://images.unsplash.com/photo-1526312426976-f4d754fa9bd6?auto=format&fit=crop&w=800&q=80",
+        title: "Even After You",
+        image: Novel,
+        link: "https://www.wattpad.com/story/338262871-even-after-you",
       },
     ],
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Wattpad_logo.png/640px-Wattpad_logo.png",
+    image: Writing,
   },
 ];
 
@@ -50,8 +55,9 @@ const CreativeWorks = () => {
 
   return (
     <section
-      id="creative-works" // ✅ navbar can scroll here
-      className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 bg-gradient-to-b from-black via-gray-900 to-black text-white pt-16 md:pt-0 pb-20 md:pb-28"
+      id="creative-works"
+      className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 
+                 bg-gradient-to-b from-black via-gray-900 to-black text-white pt-16 md:pt-0 pb-20 md:pb-28"
     >
       {/* Title */}
       <motion.h2
@@ -83,17 +89,19 @@ const CreativeWorks = () => {
                 isMobile &&
                 setActiveCard((prev) => (prev === work.id ? null : work.id))
               }
-              className="bg-white/10 border border-white/20 rounded-2xl overflow-hidden shadow-lg backdrop-blur-md hover:scale-105 transition-transform w-80 sm:w-96 h-[28rem] flex flex-col justify-center items-center p-5 cursor-pointer"
+              className="bg-white/10 border border-white/20 rounded-2xl overflow-hidden 
+                         shadow-lg backdrop-blur-md hover:scale-105 transition-transform 
+                         w-80 sm:w-96 h-[28rem] flex flex-col cursor-pointer"
             >
               {isActive ? (
-                // List View
+                // ✅ List View
                 <motion.div
                   key="list"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.3 }}
-                  className="w-full overflow-y-auto"
+                  className="w-full overflow-y-auto p-4"
                 >
                   <h3 className="text-xl font-semibold mb-4 text-center">
                     {work.category} List
@@ -102,43 +110,53 @@ const CreativeWorks = () => {
                     {work.items.map((item) => (
                       <li
                         key={item.id}
-                        className="flex items-center gap-3 bg-white/10 rounded-lg p-3"
+                        className="flex items-center gap-4 bg-white/10 rounded-lg p-3 hover:bg-white/20 transition"
                       >
                         <img
                           src={item.image}
                           alt={item.title}
-                          className="w-16 h-16 object-cover rounded-md"
+                          className="w-20 h-20 object-cover rounded-md"
                         />
-                        <span className="text-base">{item.title}</span>
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-base text-green-400 hover:underline"
+                        >
+                          {item.title}
+                        </a>
                       </li>
                     ))}
                   </ul>
                 </motion.div>
               ) : (
-                // Default View
+                // ✅ Default View
                 <motion.div
                   key="default"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.3 }}
-                  className="flex flex-col items-center text-center"
+                  className="flex flex-col h-full"
                 >
-                  <div className="h-48 w-full overflow-hidden rounded-md mb-4">
+                  {/* Top Image */}
+                  <div className="h-3/5 w-full overflow-hidden">
                     <img
                       src={work.image}
                       alt={work.title}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-xl font-semibold">{work.title}</h3>
-                  <p className="text-sm text-gray-300 mt-2">
-                    {work.description}
-                  </p>
-                  {/* 👇 Mobile-only helper message */}
-                  <p className="text-xs text-gray-400 mt-3 md:hidden">
-                    Tap to see list
-                  </p>
+                  {/* Bottom Content Centered */}
+                  <div className="flex flex-col items-center text-center justify-center flex-1 p-4">
+                    <h3 className="text-xl font-semibold">{work.title}</h3>
+                    <p className="text-sm text-gray-300 mt-2">
+                      {work.description}
+                    </p>
+                    <p className="text-xs text-gray-400 mt-3 md:hidden">
+                      Tap to see list
+                    </p>
+                  </div>
                 </motion.div>
               )}
             </motion.div>

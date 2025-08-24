@@ -1,66 +1,91 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi";
+
+// ✅ Local assets
 import Portfolio from "../assets/portfolio.png";
 import Solar from "../assets/SolarSystem.png";
 import Space from "../assets/SolarBlast.png";
 import SpaceStronaut from "../assets/SpaceStronaut.png";
 import Yoga from "../assets/YogaPose.png";
 import txtsum from "../assets/txtsum.png";
+import TCH from "../assets/Ten CodeHub.png";
+import EDT from "../assets/Eduten.png";
+import TCE from "../assets/TCE.png";
+import Personal from "../assets/PersonalPortfolio.png";
 
-
-
-
-
-// Project details
+// ✅ Project details
 const projects = [
+  {
+    title: "Personal Portfolio Website",
+    description:
+      "Hands on Vite Technology and Tailwind CSS. Built a fully responsive portfolio with 3-D Components.",
+    link: "https://kartikaykandpalportfolio.netlify.app",
+    image: Personal,
+  },
+  {
+    title: "TEN Tech Competition Engine",
+    description: "Used MERN Stack and Django Framework to build a clone of Hackerrank.",
+    link: "https://github.com/UmaShankarBharawa/TEN-Tech-Competition-Engine",
+    image: TCE,
+  },
+  {
+    title: "EduTen",
+    description:
+      "A Udemy-like platform built with MERN stack for free learning and courses.",
+    link: "https://github.com/blackcross7/EduTen-Cloning-Udemy-",
+    image: EDT,
+  },
+  {
+    title: "TEN CodeHub",
+    description:
+      "A MERN Stack website, clone of GeeksforGeeks with Tailwind CSS & MongoDB authentication.",
+    link: "https://ten-code-hub.vercel.app/",
+    image: TCH,
+  },
   {
     title: "React Portfolio Website",
     description:
-      "A Reactive Portfolio Website made using Next.js, CSS, HTML, Tailwind CSS, JavaScript and Framer Motion. Code Source available on Github.",
-    link: "https://kartikaykandpal.netlify.app/", 
+      "A reactive portfolio made using Next.js, Tailwind CSS, JavaScript & Framer Motion.",
+    link: "https://kartikaykandpal.netlify.app/",
     image: Portfolio,
   },
   {
-    title: "Solar System Simulation-3D",
+    title: "Solar System Simulation - 3D",
     description:
-      "A 3D Solar System Simulation made using Unity3D. Game is available on itch.io. Source Code available on Github.",
+      "A 3D Solar System Simulation built with Unity3D. Playable on itch.io.",
     link: "https://21bcs10038.itch.io/solar-system",
     image: Solar,
   },
   {
     title: "Space Blast",
     description:
-      "A 2D Space Shooter game made using Unity Engine with C#. Game is available on itch.io. Source Code available on Github.",
+      "A 2D space shooter made with Unity & C#. Playable on itch.io.",
     link: "https://21bcs10038.itch.io/space-blast",
     image: Space,
   },
   {
     title: "SpaceStronaut",
     description:
-      "Guided project on Unity Engine. Dodge and destroy obstacles. Game is available on itch.io. Source Code available on Github.",
+      "Guided Unity project — dodge & destroy obstacles. Playable on itch.io.",
     link: "https://21bcs10038.itch.io/spacestronout",
     image: SpaceStronaut,
   },
   {
     title: "Yoga Pose Detection",
     description:
-      "Used TensorFlow and OpenPose to build a model correcting Yoga Postures via live webcam. Web UI built using Flask, HTML, CSS and JavaScript.",
+      "AI model using TensorFlow & OpenPose to correct yoga postures. Web UI built with Flask.",
     link: "https://github.com/blackcross7/Yoga-Pose-Detection",
     image: Yoga,
   },
   {
     title: "AI Text Summarizer",
     description:
-      "Transformer models (BERT, Pegasus, T5) to summarize and process text, with a Flask and JS interface.",
+      "Summarizer using transformer models (BERT, Pegasus, T5) with Flask & JS UI.",
     link: "https://github.com/blackcross7/AI-Text-Summarization",
     image: txtsum,
   },
 ];
-
-// Theme
-const cardTheme =
-  "bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/20 shadow-xl";
 
 const ProjectSection = () => {
   return (
@@ -68,7 +93,7 @@ const ProjectSection = () => {
       id="projects"
       className="w-full min-h-screen flex flex-col items-center relative z-0"
     >
-      <div className="w-full relative py-36 px-4 sm:px-10 lg:px-[12rem] text-white min-h-screen flex flex-col items-center bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e]">
+      <div className="w-full relative py-32 px-4 sm:px-10 lg:px-[8rem] text-white flex flex-col items-center bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e]">
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/60 z-0" />
 
@@ -84,42 +109,38 @@ const ProjectSection = () => {
         </motion.h2>
 
         {/* Cards */}
-        <div className="relative z-10 grid gap-10 md:grid-cols-2 xl:grid-cols-3 w-full max-w-7xl">
+        <div className="relative z-10 flex flex-wrap justify-center gap-10 w-full max-w-7xl">
           {projects.map((proj, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.08 }}
-              className={`rounded-xl p-6 flex flex-col justify-between group ${cardTheme}`}
-              style={{ minHeight: 340 }}
+              transition={{ duration: 0.6, delay: idx * 0.1 }}
+              className="bg-white/10 border border-white/20 rounded-2xl overflow-hidden shadow-lg backdrop-blur-md hover:scale-105 transition-transform w-80 sm:w-96 h-[28rem] flex flex-col"
             >
-              {/* Image */}
-              <div className="relative w-full h-40 rounded-lg overflow-hidden mb-5">
+              {/* ✅ Top Image */}
+              <div className="h-3/5 w-full overflow-hidden">
                 <img
                   src={proj.image}
                   alt={proj.title}
-                  className="w-full h-full object-cover object-top opacity-70 group-hover:opacity-90 transition"
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-80"></div>
               </div>
 
-              {/* Text */}
-              <h3 className="text-lg font-semibold text-white mb-1">
-                {proj.title}
-              </h3>
-              <p className="text-sm text-gray-200 mb-3">{proj.description}</p>
+              {/* ✅ Bottom Content */}
+              <div className="flex flex-col items-center text-center justify-center flex-1 p-4">
+                <h3 className="text-lg font-semibold">{proj.title}</h3>
+                <p className="text-sm text-gray-300 mt-2">{proj.description}</p>
 
-              {/* Link */}
-              <div className="flex justify-center mt-2">
+                {/* Link */}
                 <a
                   href={proj.link}
-                  className="inline-flex items-center gap-2 text-green-400 hover:text-green-200 transition text-base font-semibold"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-green-400 hover:text-green-200 transition text-sm font-semibold mt-4"
                 >
-                  <FiExternalLink size={22} />
+                  <FiExternalLink size={18} />
                   <span>View Project</span>
                 </a>
               </div>
