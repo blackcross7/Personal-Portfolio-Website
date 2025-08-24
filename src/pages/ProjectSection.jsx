@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi";
-import Portfolio from "../assets/Portfolio.png";
+import Portfolio from "../assets/portfolio.png";
 import Solar from "../assets/SolarSystem.png";
 import Space from "../assets/SolarBlast.png";
 import SpaceStronaut from "../assets/SpaceStronaut.png";
