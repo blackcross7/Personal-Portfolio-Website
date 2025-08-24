@@ -1,6 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi";
+import Portfolio from "../assets/Portfolio.png";
+import Solar from "../assets/SolarSystem.png";
+import Space from "../assets/SolarBlast.png";
+import SpaceStronaut from "../assets/SpaceStronaut.png";
+import Yoga from "../assets/YogaPose.png";
+import txtsum from "../assets/txtsum.png";
+
+
+
+
 
 // Project details
 const projects = [
@@ -8,43 +18,43 @@ const projects = [
     title: "React Portfolio Website",
     description:
       "A Reactive Portfolio Website made using Next.js, CSS, HTML, Tailwind CSS, JavaScript and Framer Motion. Code Source available on Github.",
-    link: "#", // Replace with your repo/deploy link
-    image: "/portfolio-bg.jpg",
+    link: "https://kartikaykandpal.netlify.app/", 
+    image: Portfolio,
   },
   {
     title: "Solar System Simulation-3D",
     description:
       "A 3D Solar System Simulation made using Unity3D. Game is available on itch.io. Source Code available on Github.",
-    link: "#",
-    image: "/solar-system.jpg",
+    link: "https://21bcs10038.itch.io/solar-system",
+    image: Solar,
   },
   {
     title: "Space Blast",
     description:
       "A 2D Space Shooter game made using Unity Engine with C#. Game is available on itch.io. Source Code available on Github.",
-    link: "#",
-    image: "/space-blast.jpg",
+    link: "https://21bcs10038.itch.io/space-blast",
+    image: Space,
   },
   {
     title: "SpaceStronaut",
     description:
       "Guided project on Unity Engine. Dodge and destroy obstacles. Game is available on itch.io. Source Code available on Github.",
-    link: "#",
-    image: "/spacestronaut.jpg",
+    link: "https://21bcs10038.itch.io/spacestronout",
+    image: SpaceStronaut,
   },
   {
     title: "Yoga Pose Detection",
     description:
       "Used TensorFlow and OpenPose to build a model correcting Yoga Postures via live webcam. Web UI built using Flask, HTML, CSS and JavaScript.",
-    link: "#",
-    image: "/yoga-pose.jpg",
+    link: "https://github.com/blackcross7/Yoga-Pose-Detection",
+    image: Yoga,
   },
   {
     title: "AI Text Summarizer",
     description:
       "Transformer models (BERT, Pegasus, T5) to summarize and process text, with a Flask and JS interface.",
-    link: "#",
-    image: "/ai-text-summarizer.jpg",
+    link: "https://github.com/blackcross7/AI-Text-Summarization",
+    image: txtsum,
   },
 ];
 
