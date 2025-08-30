@@ -87,7 +87,7 @@ const AboutSection = () => {
 
   const aboutTexts = [
     "Hello! I'm Kartikay Kandpal, a Computer Science Engineer graduated from Chandigarh University, currently working as a Full time Employee in Cognizant Technology Solutions as a Programmer Analyst Trainee under Application Development and Maintenance Service Line.",
-    "I specialize in Java, C++, Python, SQL, Unix or UNIX-like OS and JavaScript, with hands-on experience in building responsive portfolios, cyoga pose detection, sentiment analysis tools, and certain projects in MERN and Django.",
+    "I specialize in Java, C++, Python, SQL, Unix or UNIX-like OS and JavaScript, with hands-on experience in building responsive portfolios, yoga pose detection, sentiment analysis tools, and certain projects in MERN and Django.",
     "I'm driven by innovation, continuous learning, and a goal to create impactful tech solutions while growing alongside forward-thinking teams.",
     "Take a sneak-peak on my journey below.",
   ];

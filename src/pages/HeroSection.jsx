@@ -188,7 +188,7 @@ const HeroSection = () => {
               Hire Me
             </a>
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1T_KHNdfrVnDx_IPTBS-csSRgFS5U7nVh/view?usp=sharing"
               download
               aria-label="Download my resume"
               className="
