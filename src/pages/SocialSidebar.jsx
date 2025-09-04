@@ -57,7 +57,7 @@ const IHeartRadioIcon = () => (
 
 /* ---- Social Icons Array ---- */
 const icons = [
-  { icon: <FaGithub />, link: "https://github.com/blackcross" },
+  { icon: <FaGithub />, link: "https://github.com/blackcross7" },
   { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/kartikay7/" },
   { icon: <FaSpotify />, link: "https://open.spotify.com/artist/14pbobNVJxUjGy19ZGkrr9?si=xi_KjN0gRdaL7JKX9WXxGA" },
   { icon: <SiWattpad />, link: "https://www.wattpad.com/myworks/338262871-even-after-you" },
