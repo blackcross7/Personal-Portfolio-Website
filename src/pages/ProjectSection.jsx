@@ -20,7 +20,7 @@ const projects = [
     title: "Personal Portfolio Website",
     description:
       "Hands on Vite Technology and Tailwind CSS. Built a fully responsive portfolio with 3-D Components.",
-    link: "https://kartikaykandpalportfolio.netlify.app",
+    link: "https://akratisharma.netlify.app/",
     image: Personal,
   },
   {
@@ -47,36 +47,8 @@ const projects = [
     title: "React Portfolio Website",
     description:
       "A reactive portfolio made using Next.js, Tailwind CSS, JavaScript & Framer Motion.",
-    link: "https://kartikaykandpal.netlify.app/",
+    link: "https://akratisharma26.netlify.app/",
     image: Portfolio,
-  },
-  {
-    title: "Solar System Simulation - 3D",
-    description:
-      "A 3D Solar System Simulation built with Unity3D. Playable on itch.io.",
-    link: "https://21bcs10038.itch.io/solar-system",
-    image: Solar,
-  },
-  {
-    title: "Space Blast",
-    description:
-      "A 2D space shooter made with Unity & C#. Playable on itch.io.",
-    link: "https://21bcs10038.itch.io/space-blast",
-    image: Space,
-  },
-  {
-    title: "SpaceStronaut",
-    description:
-      "Guided Unity project — dodge & destroy obstacles. Playable on itch.io.",
-    link: "https://21bcs10038.itch.io/spacestronout",
-    image: SpaceStronaut,
-  },
-  {
-    title: "Yoga Pose Detection",
-    description:
-      "AI model using TensorFlow & OpenPose to correct yoga postures. Web UI built with Flask.",
-    link: "https://github.com/blackcross7/Yoga-Pose-Detection",
-    image: Yoga,
   },
   {
     title: "AI Text Summarizer",
