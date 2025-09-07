@@ -4,31 +4,25 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
 import DataAnalyticsCert from "../assets/Data Analytics.png";
 import GenAICert from "../assets/GenAI.png";
-import PythonCert from "../assets/Developing Ai Apps.png";
-import UI_UX from "../assets/UX-UI by Meta.png";
-import DV from "../assets/DV Tableau.png";
-import Unity from "../assets/Unity.png";
-import Maths from "../assets/Maths.png";
-import DLRL from "../assets/DLRL.png";
+
 import Java from "../assets/Java.png";
 import MobDev from "../assets/MobDev.png";
-import Frontend from "../assets/Frontend.png";
-import Google from "../assets/Google.png";
+import DSP from "../assets/DSP.png";
+import CC from "../assets/CC.png";
+import IOT from "../assets/IOT.png";
+import UX from "../assets/UX.png"
+
 
 const certifications = [
-  { name: "Data Analytics", institution: "Deloitte", image: DataAnalyticsCert, link: "https://drive.google.com/file/d/1kKwzoBrweeKIT8wrgRvRv8yE3zyCuJsl/view", year: "January 2025" },
-  { name: "GenAI", institution: "BCGX", image: GenAICert, link: "https://drive.google.com/file/d/1-nJ6TdlI7clrXynBLcmRCrmGJNmKgNOf/view", year: "January 2025" },
-  { name: "Developing AI Applications with Python", institution: "IBM", image: PythonCert, link: "https://www.coursera.org/account/accomplishments/verify/VZ2WCY4G5PVH", year: "March 2024" },
-  { name: "UX/UI Design", institution: "Meta", image: UI_UX, link: "https://www.coursera.org/account/accomplishments/verify/P2CAL6BPFKVC", year: "March 2024" },
-  { name: "Data Visualization with Tableau", institution: "UCDAVIS", image: DV, link: "https://www.coursera.org/account/accomplishments/verify/HNU3DN5G42UP", year: "January 2024" },
-  { name: "Game Designing using Unity Engine", institution: "Coursera Project Network", image: Unity, link: "https://drive.google.com/drive/u/1/folders/1zC2i1KVQZhoZX75cD5PzNZcF4A58IUA2", year: "June 2022" },
-  { name: "Discrete Mathematics (NPTEL)", institution: "IIT Madras", image: Maths, link: "https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL22CS123BS7466000610043586", year: "Oct 2022" },
-  { name: "Deep Learning & Reinforcement Learning", institution: "IBM", image: DLRL, link: "https://www.coursera.org/account/accomplishments/verify/Y3K6AH9F9WTN", year: "January 2024" },
-  { name: "Java as a Second Language", institution: "LearnQuest", image: Java, link: "https://www.coursera.org/account/accomplishments/specialization/36TVUZP7G2NY", year: "September 2024" },
-  { name: "Mobile Development", institution: "Meta", image: MobDev, link: "https://www.coursera.org/account/accomplishments/verify/Y3ETL8YPBY1O", year: "September 2024" },
-  { name: "Intro to Web Development with HTML, CSS, JS", institution: "IBM", image: Frontend, link: "https://www.coursera.org/account/accomplishments/verify/LCGWXNAP8EDS", year: "July 2023" },
-  { name: "Build Dynamic UI Websites", institution: "Google", image: Google, link: "https://www.coursera.org/account/accomplishments/verify/JZ99GV2XXUST", year: "July 2023" },
-  { name: "Intro to Computer Vision & Image Processing", institution: "IBM", image: Google, link: "https://www.coursera.org/account/accomplishments/verify/V6MMT25EC4QS", year: "December 2023" }
+  { name: "Data Analytics", institution: "Deloitte", image: DataAnalyticsCert, link: "https://drive.google.com/file/d/12QtGI3_GkJLYOEdmnICUEKjzSxRTSi3l/view", year: "January 2025" },
+  { name: "GenAI", institution: "BCGX", image: GenAICert, link: "https://drive.google.com/file/d/1kNbMCmWU3LHgIFL2awlA7pCmRK1TxOa3/view", year: "January 2025" },
+  { name: "Java as a Second Language", institution: "LearnQuest", image: Java, link: "https://www.coursera.org/account/accomplishments/specialization/MP6H4GP8UHL6", year: "June 2024" },
+  { name: "Mobile Development", institution: "Meta", image: MobDev, link: "https://www.coursera.org/account/accomplishments/verify/QDZYJJ28DP6Y", year: "June 2024" },
+  { name: "Data Structures and Performance", institution: "UC San Diego", image: DSP, link: "https://www.coursera.org/account/accomplishments/verify/MHTE2LY78FWH", year: "June 2024" },
+  { name: "Cloud Computing", institution: "ILLINOIS", image: CC, link: "https://www.coursera.org/account/accomplishments/verify/NF4HSKQBCY9T", year: "June 2022" },
+  { name: "Introduction to Internet of things", institution: "Coursera", image: IOT, link: "https://www.coursera.org/account/accomplishments/verify/S5Y8S78BVUD9", year: "August 2024" },
+  { name: "Foundation of UX Design", institution: "Google", image: UX, link: "https://www.coursera.org/account/accomplishments/verify/UVDEBCV3AN7E", year: "June 2023" },
+
 ];
 
 const CertifyData = () => {

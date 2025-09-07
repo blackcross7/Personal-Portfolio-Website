@@ -3,29 +3,32 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
 // Sample images - replace with actual imports or paths
 import ChandigarhLogo from "../assets/chandigarh.png";
-import VisionValleyLogo from "../assets/visionvalley.png";
+import TCS from "../assets/TCS.png";
 
 const educationData = [
-  {
-    institution: "Vision Valley School",
-    logo: VisionValleyLogo,
-    degree: "High School",
-    duration: "Mar 2018 - Apr 2019",
-    grade: "88.6%",
-  },
-  {
-    institution: "Vision Valley School",
-    logo: VisionValleyLogo,
-    degree: "Intermediate - PCM",
-    duration: "Mar 2020 - Apr 2021",
-    grade: "88%",
-  },
+
   {
     institution: "Chandigarh University",
     logo: ChandigarhLogo,
     degree: "Bachelors in Computer Science Engineering",
     duration: "Aug 2021 - May 2025",
-    grade: "7.23 CGPA",
+    grade: "7.91 CGPA",
+  },
+  
+  {
+    institution: "Trinity Convent Higher Secondary School",
+    logo: TCS,
+    degree: "Intermediate - PCM",
+    duration: "Mar 2020 - Apr 2021",
+    grade: "82%",
+  },
+  
+  {
+    institution: "Trinity Convent Higher Secondary School",
+    logo: TCS,
+    degree: "High School",
+    duration: "Mar 2018 - Apr 2019",
+    grade: "81%",
   },
 ];
 
@@ -44,6 +47,15 @@ const EduData = () => {
     );
   };
 
+  const getLogoSize = (institution, view = "desktop") => {
+    const isTCS = institution.includes("Vision Valley");
+    if (view === "desktop") {
+      return isTCS ? "w-24 h-24" : "w-20 h-20";
+    } else {
+      return isTCS ? "w-20 h-20" : "w-16 h-16";
+    }
+  };
+
   return (
     <div className="w-full flex flex-col items-center">
       {/* Desktop / Tablet view: show all cards */}
@@ -57,7 +69,10 @@ const EduData = () => {
             <img
               src={edu.logo}
               alt={edu.institution}
-              className="w-20 h-20 object-contain mb-4 opacity-80"
+              className={`object-contain mb-4 opacity-80 ${getLogoSize(
+                edu.institution,
+                "desktop"
+              )}`}
             />
             <h3 className="text-lg font-semibold text-center mb-2">
               {edu.institution}
@@ -93,7 +108,10 @@ const EduData = () => {
             <img
               src={educationData[currentIndex].logo}
               alt={educationData[currentIndex].institution}
-              className="w-16 h-16 object-contain mb-4 opacity-80"
+              className={`object-contain mb-4 opacity-80 ${getLogoSize(
+                educationData[currentIndex].institution,
+                "mobile"
+              )}`}
             />
             <h3 className="text-base font-semibold text-center mb-2">
               {educationData[currentIndex].institution}

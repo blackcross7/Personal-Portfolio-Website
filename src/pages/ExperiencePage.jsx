@@ -12,12 +12,20 @@ const experiences = [
       "Built and maintained MERN-based web applications, collaborated with cross-functional teams, and handled deployment processes.",
   },
   {
+    title: "Quality Assurance Intern",
+    company: "Brainly",
+    date: "April 2023 - June 2023",
+    type: "Internship",
+    description:
+      "Analysed the quality of content and verification of queries and answers of users and assured valid content to be posted on Website.",
+  },
+  {
     title: "Finance Intern",
     company: "Stock Gurukul",
     date: "June 2023 - July 2023",
     type: "Internship",
     description:
-      "Learned about Software Development Lifecycle, automated test cases, contributed to software development, testing, and maintenance ensuring software quality and reliability.",
+      "Closely monitored the Stock Market and handled and maintained stocks for different clients to ensure the profitable investment and maintain it overtime.",
   },
 ];
 
