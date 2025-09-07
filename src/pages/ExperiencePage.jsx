@@ -4,32 +4,17 @@ import { FaBriefcase } from "react-icons/fa";
 
 const experiences = [
   {
-    title: "Programmer Analyst Trainee",
-    company: "Cognizant Technology Solutions",
-    date: "Aug 2025 - Present",
-    description:
-      "Working as a Programmer Analyst Trainee in Application Development and Maintenance. Handy with JAVA, Command like interfaces such as LINUX, frameworks such as Bootstrap and Springboot, and Maven.",
-  },
-  {
-    title: "Chief of Staff - MERN and Django Developer",
-    company: "The Entrepreneurship Network",
-    date: "Jul 2025 - Aug 2025",
-    type: "Part-time",
-    description:
-      "Served as a guide and Chief of various Team-Leads working on projects on MERN stack and Django. Completed projects like EduTEN and TEN Tech Competition Engine",
-  },
-  {
     title: "MERN Developer",
     company: "The Entrepreneurship Network",
-    date: "Apr 2025 - Aug 2025",
+    date: "April 2025 - August 2025",
     type: "Internship",
     description:
       "Built and maintained MERN-based web applications, collaborated with cross-functional teams, and handled deployment processes.",
   },
   {
-    title: "Software Developer Intern",
-    company: "SmartSchool Education Pvt. Ltd., Noida",
-    date: "Nov 2024 - Jan 2025",
+    title: "Finance Intern",
+    company: "Stock Gurukul",
+    date: "June 2023 - July 2023",
     type: "Internship",
     description:
       "Learned about Software Development Lifecycle, automated test cases, contributed to software development, testing, and maintenance ensuring software quality and reliability.",

@@ -40,37 +40,8 @@ const skillIcons = [
   { name: "Python", icon: <FaPython size={80} color="#3776AB" /> },
   { name: "C++", icon: <SiCplusplus size={80} color="#00599C" /> },
   { name: "HTML", icon: <FaHtml5 size={80} color="#E44D26" /> },
-  { name: "Java", icon: <FaJava size={80} color="#f89820" /> },
-  { name: "Git", icon: <FaGitAlt size={80} color="#F05032" /> },
-  { name: "Linux", icon: <SiLinux size={80} color="#FCC624" /> },
-  { name: "Unix", icon: <SiLinux size={80} color="#FFFFFF" /> },
-  { name: "Bootstrap", icon: <SiBootstrap size={80} color="#7952B3" /> },
-  { name: "Maven", icon: <SiApachemaven size={80} color="#C71A36" /> },
-  { name: "Spring Boot", icon: <SiSpringboot size={80} color="#6DB33F" /> },
-  {
-    name: "Log4j",
-    icon: (
-      <SiApache
-        size={80}
-        color="#D22128"
-        title="Log4j (Apache logging framework)"
-      />
-    ),
-  },
-  {
-    name: "Logging",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="80"
-        height="80"
-        viewBox="0 0 24 24"
-        fill="orange"
-      >
-        <path d="M3 3h18v2H3zm0 6h12v2H3zm0 6h18v2H3zm0 6h12v2H3z" />
-      </svg>
-    ),
-  },
+  { name: "Git", icon: <FaGitAlt size={80} color="#F05032" /> }
+
 ];
 
 const AboutSection = () => {
@@ -86,8 +57,8 @@ const AboutSection = () => {
   const intervalRef = useRef(null);
 
   const aboutTexts = [
-    "Hello! I'm Kartikay Kandpal, a Computer Science Engineer graduated from Chandigarh University, currently working as a Full time Employee in Cognizant Technology Solutions as a Programmer Analyst Trainee under Application Development and Maintenance Service Line.",
-    "I specialize in Java, C++, Python, SQL, Unix or UNIX-like OS and JavaScript, with hands-on experience in building responsive portfolios, yoga pose detection, sentiment analysis tools, and certain projects in MERN and Django.",
+    "Hello! I'm Akrati Sharma, a Computer Science Engineer graduated from Chandigarh University, currently looking out for opportunities which would enhance my abilities.",
+    "I specialize in C++, OOPs and DSA Concepts, Iot and Cloud Computing basics with hands-on experience in building responsive portfolios, Vehicle Maintenance application, sentiment analysis tools, and certain projects in MERN and Django.",
     "I'm driven by innovation, continuous learning, and a goal to create impactful tech solutions while growing alongside forward-thinking teams.",
     "Take a sneak-peak on my journey below.",
   ];

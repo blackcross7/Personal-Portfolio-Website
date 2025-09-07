@@ -15,10 +15,10 @@ const Model = () => {
 };
 
 const nameAndRoles = [
-  "Kartikay Kandpal",
-  "Software Developer",
+  "Akrati Sharma",
+  "Application Developer",
   "MERN Stack Developer",
-  "Data Analyst",
+  "Data Handler-",
   "Tech Enthusiast"
 ];
 
