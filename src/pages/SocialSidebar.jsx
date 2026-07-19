@@ -16,8 +16,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 /* ---- Social Icons Array ---- */
 const icons = [
-  { icon: <FaGithub />, link: "https://github.com/blackcross7" },
-  { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/kartikay7/" },
+  { icon: <FaGithub />, link: "https://github.com/akrati260" },
+  { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/akratisharma26/" },
   { icon: <FaItchIo />, link: "https://itch.io/profile/21bcs10038https://itch.io" },
   { icon: <FaInstagram />, link: "https://www.instagram.com/im_kartikay7?igsh=dGV5amtwbjh3encw" },
 ];
