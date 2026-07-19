@@ -155,17 +155,18 @@ const HeroSection = () => {
             "
           >
             Results-driven Salesforce Developer and Project Engineer at Wipro with hands-on experience in Apex, Lightning Web
-            Components, SOQL, and end-to-end Salesforce application development. Holder of 5 Salesforce certifications including
-            Agentforce Specialist and Platform Developer I. 
-            As a passionate software professional, I am driven to{" "}
-            <span className="text-green-400 transition-all duration-500 ease-in-out">
-              {morphPhrases[currentPhrase]}
-            </span>
-            
-            Complemented by strong full-stack skills in the MERN stack and Python-based
-            machine learning. Seeking entry-level Salesforce or full-stack development roles where I can deliver real business impact. 
-          </motion.p>
+  Components, SOQL, and end-to-end Salesforce application development. Holder of 5 Salesforce certifications including
+  Agentforce Specialist and Platform Developer I. 
+  As a passionate software professional, I am driven to{" "}
+  <span className="text-green-400 transition-all duration-500 ease-in-out">
+    {morphPhrases[currentPhrase]}
+  </span>
+</motion.p>
 
+<motion.p>
+  Complemented by strong full-stack skills in the MERN stack and Python-based
+  machine learning. Seeking entry-level Salesforce or full-stack development roles where I can deliver real business impact.
+</motion.p>
           {/* Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
