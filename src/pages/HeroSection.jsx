@@ -154,12 +154,15 @@ const HeroSection = () => {
               px-1
             "
           >
-            Completed my Bachelor’s degree in Computer Science and Engineering from Chandigarh University.
+            Results-driven Salesforce Developer and Project Engineer at Wipro with hands-on experience in Apex, Lightning Web
+            Components, SOQL, and end-to-end Salesforce application development. Holder of 5 Salesforce certifications including
+            Agentforce Specialist and Platform Developer I. 
             As a passionate software professional, I am driven to{" "}
             <span className="text-green-400 transition-all duration-500 ease-in-out">
               {morphPhrases[currentPhrase]}
             </span>
-            , continuously learning new technologies and contributing to innovative projects. My goal is to deliver impactful solutions and grow alongside forward-thinking teams.
+            Complemented by strong full-stack skills in the MERN stack and Python-based
+            machine learning. Seeking entry-level Salesforce or full-stack development roles where I can deliver real business impact. 
           </motion.p>
 
           {/* Buttons */}
