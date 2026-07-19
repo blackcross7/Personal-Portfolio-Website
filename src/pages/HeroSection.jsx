@@ -161,6 +161,7 @@ const HeroSection = () => {
             <span className="text-green-400 transition-all duration-500 ease-in-out">
               {morphPhrases[currentPhrase]}
             </span>
+            
             Complemented by strong full-stack skills in the MERN stack and Python-based
             machine learning. Seeking entry-level Salesforce or full-stack development roles where I can deliver real business impact. 
           </motion.p>
