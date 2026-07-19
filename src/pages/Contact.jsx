@@ -38,7 +38,7 @@ const Contact = () => {
           {/* Social Icons */}
           <div className="flex justify-center md:justify-start gap-4 pt-2">
             <a
-              href="https://github.com/blackcross7"
+              href="https://github.com/akrati260"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition"
@@ -46,7 +46,7 @@ const Contact = () => {
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="https://www.linkedin.com/in/kartikay7/"
+              href="https://www.linkedin.com/in/akratisharma26/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-white/10 rounded-md hover:bg-white/20 transition"
@@ -69,7 +69,7 @@ const Contact = () => {
             <label className="block text-sm mb-1">Your email</label>
             <input
               type="email"
-              placeholder="kartikay.kk47@gmail.com"
+              placeholder="akrati260@gmail.com"
               className="w-full p-3 rounded-lg bg-black/60 border border-gray-600 focus:border-purple-500 outline-none"
             />
           </div>
