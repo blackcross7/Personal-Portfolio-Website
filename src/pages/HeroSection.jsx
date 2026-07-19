@@ -141,20 +141,21 @@ const HeroSection = () => {
           </motion.div>
 
           {/* Changing phrase */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 1 }}
-            className="
-              text-xs xs:text-sm sm:text-base md:text-lg
-              text-gray-200
-              max-w-xl
-              mt-3 sm:mt-4
-              leading-relaxed
-              px-1
-            "
-          >
-            Results-driven Salesforce Developer and Project Engineer at Wipro with hands-on experience in Apex, Lightning Web
+          {/* Changing phrase */}
+<motion.p
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 1, duration: 1 }}
+  className="
+    text-xs xs:text-sm sm:text-base md:text-lg
+    text-gray-200
+    max-w-xl
+    mt-3 sm:mt-4
+    leading-relaxed
+    px-1
+  "
+>
+  Results-driven Salesforce Developer and Project Engineer at Wipro with hands-on experience in Apex, Lightning Web
   Components, SOQL, and end-to-end Salesforce application development. Holder of 5 Salesforce certifications including
   Agentforce Specialist and Platform Developer I. 
   As a passionate software professional, I am driven to{" "}
@@ -163,10 +164,23 @@ const HeroSection = () => {
   </span>
 </motion.p>
 
-<motion.p>
+<motion.p
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 1.2, duration: 1 }}
+  className="
+    text-xs xs:text-sm sm:text-base md:text-lg
+    text-gray-200
+    max-w-xl
+    mt-3 sm:mt-4
+    leading-relaxed
+    px-1
+  "
+>
   Complemented by strong full-stack skills in the MERN stack and Python-based
   machine learning. Seeking entry-level Salesforce or full-stack development roles where I can deliver real business impact.
 </motion.p>
+
           {/* Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
