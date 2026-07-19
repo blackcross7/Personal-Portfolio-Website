@@ -193,7 +193,7 @@ const HeroSection = () => {
             "
           >
             <a
-              href="mailto:kartikay.kk47@gmail.com"
+              href="mailto:akrati260@gmail.com"
               aria-label="Send me an email"
               className="
                 bg-green-500 hover:bg-green-600 text-white font-semibold
