@@ -24,7 +24,6 @@ const Navbar = () => {
     { name: "About", link: "#about" },
     { name: "Experience", link: "#experience" },
     { name: "Projects", link: "#projects" },
-    { name: "Creativity", link: "#creative-works" }, // fixed
     { name: "Contact", link: "#contact" },
   ];
 
